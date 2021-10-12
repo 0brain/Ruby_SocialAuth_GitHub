@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>get</title>
+</head>
+<body>
+
+  <p>Please enter GitHub login</p>
+  <form method="get">
+    <input type="text" name="username">
+    <button type="submit">search GitHub user</button>
+  </form>
+  {% if user %}
+    <p>{{ user.name }}</p>
+    {% for i in repo_list %}
+      <p>- {{ i.name }}</p>
+    {% endfor %}
+
+  {% endif %}
+
+</body>
+</html>
