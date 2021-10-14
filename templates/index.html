@@ -12,11 +12,16 @@
     <button type="submit">search GitHub user</button>
   </form>
   {% if user %}
+  {% if user.exist %}
+
     <p>{{ user.name }}</p>
     {% for i in repo_list %}
       <p>- {{ i.name }}</p>
     {% endfor %}
 
+  {% else %}
+      <p>{{ user.message }}</p>
+  {% endif %}
   {% endif %}
 
 </body>
